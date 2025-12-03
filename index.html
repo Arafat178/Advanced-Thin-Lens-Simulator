@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Advanced Thin Lens Simulator</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <div class="container">
+        <h2>Advanced Dual Medium Lens(Thin) Simulator</h2>
+        
+        <div class="canvas-box">
+            <canvas id="lensCanvas" width="800" height="400"></canvas>
+            <div id="imageStatus" class="status-text"></div>
+        </div>
+
+        <div class="controls">
+            <div class="control-group">
+                <label>Lens Height</label>
+                <input type="number" id="lensHeight" value="160" min="50" max="300">
+            </div>
+            <div class="control-group">
+                <label>Radius R1 (+ Convex, - Concave)</label>
+                <input type="number" id="r1" value="150">
+            </div>
+            <div class="control-group">
+                <label>Radius R2 (- Convex, + Concave)</label>
+                <input type="number" id="r2" value="-150">
+            </div>
+            <div class="control-group">
+                <label>Lens Index (μ Lens)</label>
+                <input type="number" id="muLens" value="1.5" step="0.1">
+            </div>
+
+            <div class="control-group" style="border-left: 3px solid #007bff; padding-left: 5px;">
+                <label>Medium A Index (μ<sub>A</sub>)</label>
+                <input type="number" id="muA" value="1.0" step="0.05">
+                <small>Object Side</small>
+            </div>
+            <div class="control-group" style="border-left: 3px solid #dc3545; padding-left: 5px;">
+                <label>Medium B Index (μ<sub>B</sub>)</label>
+                <input type="number" id="muB" value="1.0" step="0.05">
+                <small>Image Side</small>
+            </div>
+
+            <div class="control-group">
+                <label>Object Height (h<sub>o</sub>)</label>
+                <input type="number" id="objHeight" value="40">
+            </div>
+            <div class="control-group">
+                <label>Object Distance (u)</label>
+                <input type="number" id="objDist" value="200">
+            </div>
+        </div>
+        
+        <div class="info">
+            <p><strong>Physics Note:<br></strong> 
+            Lens Equation: 
+            <code>
+                μ<sub>A</sub>/u + μ<sub>B</sub>/v = (μ<sub>L</sub> − μ<sub>A</sub>)/R<sub>1</sub> - (μ<sub>L</sub> − μ<sub>B</sub>)/R<sub>2</sub>
+            </code></p>
+
+            <p><strong>Surface Powers:</strong><br>
+                Φ<sub>1</sub> = (μ<sub>L</sub> − μ<sub>A</sub>) / R<sub>1</sub><br>
+                Φ<sub>2</sub> = (μ<sub>L</sub> − μ<sub>B</sub>) / R<sub>2</sub>
+            </p>
+
+            <p><strong>Total Power (Thin Lens):</strong><br>
+                Φ = Φ<sub>1</sub> - Φ<sub>2</sub>
+            </p>
+
+            <p><strong>Generalized Lens Equation:</strong><br>
+                μ<sub>A</sub> / u + μ<sub>B</sub> / v = Φ
+            </p>
+
+            <p><strong>Image Distance:</strong><br>
+                v = μ<sub>B</sub> / ( Φ - μ<sub>A</sub> / u )
+            </p>
+
+            <p><strong>Focal Lengths:</strong><br>
+                f<sub>A</sub> = μ<sub>A</sub> / Φ  (object-side focal length)<br>
+                f<sub>B</sub> = μ<sub>B</sub> / Φ  (image-side focal length)
+            </p>
+
+            <p><strong>Magnification:</strong><br>
+                m = (μ<sub>A</sub> / μ<sub>B</sub>) · (v / u)<br>
+                h<sub>img</sub> = m · h<sub>obj</sub>
+            </p>
+        </div>
+
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
