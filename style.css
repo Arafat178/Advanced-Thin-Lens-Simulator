@@ -162,4 +162,21 @@ code {
 }
 ::-webkit-scrollbar-thumb:hover {
     background: #39ff14;
+
+}
+
+/* Footer Credits Styles */
+.credits {
+    text-align: center;
+    margin-top: 40px;
+    padding: 20px 0;
+    color: #1e7413;
+    font-size: 0.85rem;
+    border-top: 1px solid #222;
+}
+
+.credits .dept {
+    color: #26561d; /* Green accent for the department */
+    font-weight: 600;
+    margin-left: 5px;
 }
