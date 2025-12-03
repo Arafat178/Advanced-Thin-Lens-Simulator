@@ -54,7 +54,7 @@ A thin lens standing between two different media — this simulator shows how th
 v = \frac{μ_B}{Φ - μ_A/u}
 ]
 
-### 🔹 Focal Lengths
+### Focal Lengths
 
 Object-side focal length:
 [
@@ -66,7 +66,7 @@ Image-side focal length:
 f_B = \frac{μ_B}{Φ}
 ]
 
-### 🔹 Magnification
+### Magnification
 
 [
 m = \left( \frac{μ_A}{μ_B} \right)\left( \frac{v}{u} \right)
@@ -77,7 +77,7 @@ h_{img} = m, h_{obj}
 
 ---
 
-## 🧩 Project Structure
+## Project Structure
 
 ```
 📁 Lens-Simulator
@@ -90,7 +90,7 @@ h_{img} = m, h_{obj}
 ---
 
 
-## 🎮 Controls
+## Controls
 
 | Parameter   | Meaning                                     |
 | ----------- | ------------------------------------------- |
@@ -105,7 +105,7 @@ h_{img} = m, h_{obj}
 
 ---
 
-## 🌈 What This Simulator Teaches
+## What This Simulator Teaches
 
 * How light bends differently in different media
 * Why focal lengths depend on which medium you're measuring from
@@ -114,7 +114,7 @@ h_{img} = m, h_{obj}
 * How curvature direction affects lens power
 ---
 
-## 🧑‍💻 Technologies Used
+## Technologies Used
 
 * **HTML5 Canvas**
 * **JavaScript**
@@ -122,7 +122,7 @@ h_{img} = m, h_{obj}
 
 ---
 
-## 🌟 Author
+## Author
 
 **Arafat**
 Mechanical Engineering Student
